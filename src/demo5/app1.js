@@ -14,4 +14,4 @@ var obj1 = {
 
 obj1.anonymousFunction();
 
-obj1.arrowFunction();ßß
+obj1.arrowFunction();
