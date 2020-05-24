@@ -25,6 +25,25 @@ console.log(mercedes.getFullName());
 
 /////////////////////////////////
 
+// create from object
+var volvo = {};
+Object.setPrototypeOf(volvo, Car.prototype);
+Car.call(volvo, "Volvo", "S80", 2005, "Yellow");
+
+console.log(volvo.getFullName());
+
+/////////////////////////////////
+
+// create from object
+var volvo2 = {};
+Car.call(volvo2, "Volvo", "S80", 2005, "Yellow");
+Object.setPrototypeOf(volvo2, Car.prototype);
+
+console.log(volvo2.getFullName());
+
+/////////////////////////////////
+
+
 var audi = {
     make: "Audi",
     model: "A6",
