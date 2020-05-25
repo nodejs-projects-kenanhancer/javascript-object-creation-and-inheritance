@@ -17,7 +17,7 @@ Shape.prototype.move = function (x, y) {
 function Rectangle(x, y, width, height) {
     var args = Array.prototype.slice.call(arguments);
 
-    Shape.apply(this, args);
+    Object.assign(this, Shape.apply(this, args));
 
     this.type = "Rectangle";
     this.width = args[2] || 0;

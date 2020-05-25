@@ -13,7 +13,7 @@ function Shape() {
 function Rectangle() {
     var args = Array.prototype.slice.call(arguments);
 
-    Shape.apply(this, args);
+    Object.assign(this, Shape.apply(this, args));
 
     this.type = "Rectangle";
     this.width = args[2] || 0;

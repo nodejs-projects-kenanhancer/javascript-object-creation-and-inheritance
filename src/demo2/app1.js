@@ -9,7 +9,8 @@ function Shape() {
 
 // Rectangle - subclass
 function Rectangle() {
-    Shape.apply(this, arguments);
+
+    Object.assign(this, Shape.apply(this, arguments));
 
     this.type = "Rectangle";
     this.width = arguments[2] || 0;
