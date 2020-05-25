@@ -95,7 +95,7 @@ console.log(car1.toString());
 ////////////////////////////// TOYOTA(SUBCLASS) EXTENDS(INHERIT) CAR SUPERCLASS ///////////////////////////////////////
 function Toyota() {
     Object.assign(this, Car.call(this, arguments));
-    // Car.call(this); // This way doesn't work here because Car superclass doesn't implement `this` keyword in fucntion.
+    // Car.call(this, arguments); // This way doesn't work here because Car superclass doesn't implement `this` keyword in fucntion.
 }
 
 Toyota.prototype = Object.create(Car.prototype);

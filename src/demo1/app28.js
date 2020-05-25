@@ -19,7 +19,7 @@ console.log(toyota.getFullName());
 // create from object
 var mercedes = {};
 mercedes.__proto__ = Object.create(Car.prototype).__proto__;
-Car.call(mercedes, "Mercedes", "CL 500", 2005, "Black");
+Object.assign(mercedes, Car.call(mercedes, "Mercedes", "CL 500", 2005, "Black"));
 
 console.log(mercedes.getFullName());
 
@@ -28,7 +28,7 @@ console.log(mercedes.getFullName());
 // create from object
 var volvo = {};
 Object.setPrototypeOf(volvo, Car.prototype);
-Car.call(volvo, "Volvo", "S80", 2005, "Yellow");
+Object.assign(volvo, Car.call(volvo, "Volvo", "S80", 2005, "Yellow"));
 
 console.log(volvo.getFullName());
 
@@ -36,8 +36,8 @@ console.log(volvo.getFullName());
 
 // create from object
 var volvo2 = {};
-Car.call(volvo2, "Volvo", "S80", 2005, "Yellow");
 Object.setPrototypeOf(volvo2, Car.prototype);
+Object.assign(volvo2, Car.call(volvo2, "Volvo", "S80", 2005, "Yellow"));
 
 console.log(volvo2.getFullName());
 

@@ -58,7 +58,7 @@ var Quad = (function () {
 var Car4wdd = (function () {
 
     function Car4wd() {
-        Quad.call(this, arguments);
+        Object.assign(this, Quad.call(this, arguments));
 
         this.spareWheels = 1;
         this.extraDrivingWheels = 2;
@@ -84,6 +84,7 @@ var myCar = new Car4wdd();
 console.log(myQuad.getWheelCount()); // 4
 console.log(myQuad.getDrivingWheelCount()); // 2
 
+console.log(myCar.getMotorSize()); //
 console.log(myCar.getWheelCount()); // 4
 console.log(myCar.getDrivingWheelCount()); // 4 - The overriden method is called
 console.log(myCar.getSpareWheelCount()); // 1

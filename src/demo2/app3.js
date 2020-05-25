@@ -10,7 +10,7 @@ function Shape(x, y) {
 // Rectangle - subclass
 function Rectangle(x, y, width, height) {
 
-    Shape.call(this, x, y);
+    Object.assign(this, Shape.call(this, x, y));
 
     this.type = "Rectangle";
     this.width = width;
